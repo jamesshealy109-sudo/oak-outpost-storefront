@@ -2,7 +2,7 @@
 
 Standalone Southern lifestyle storefront built with Next.js and TypeScript. Fourthwall supplies the real product catalog, inventory, customer carts, payment checkout, print-on-demand production, shipping, and order administration during the initial phase. The presentation and source code are independent of the Fourthwall website theme.
 
-Public site: https://oak-outpost-storefront.strataworks-0552.chatgpt.site
+Public site: https://oakoutfit.strataworks.tech
 
 ## Run locally
 
@@ -40,7 +40,7 @@ The standard production server listens on port 3100. A standalone Node image is 
 
 ## Ownership and administration
 
-Repository: `jamesshealy109-sudo/oak-outpost-storefront` (private). This repository is currently owned by the user's GitHub account; transfer it when the customer should own the source directly.
+Repository: `jamesshealy109-sudo/oak-outpost-storefront` (public, as selected by the owner). This repository is currently owned by the user's GitHub account; transfer it when the customer should own the source directly.
 
 Use Fourthwall's authenticated owner dashboard for products, prices, sizes, colors, orders, refunds, production, shipping, and payment settings. Website copy is in `lib/content.ts` and the page components. A separate browser CMS was not included in the approved initial scope.
 
@@ -54,7 +54,7 @@ For a later dropshipping supplier, see [migration](docs/dropshipping-migration.m
 
 ## Verification and current limitations
 
-See [verification](docs/verification.md) for the checks actually performed. The standalone frontend is publicly hosted through Sites, with a private GitHub source repository. The Fourthwall backend shop is Live. Payment submission and paid fulfillment have not been tested. A custom customer domain can be connected separately.
+See [verification](docs/verification.md) for the checks actually performed. The standalone frontend runs in its own Proxmox container at https://oakoutfit.strataworks.tech, with HTTPS through the existing reverse proxy. The Fourthwall backend shop is Live. Payment submission and paid fulfillment have not been tested. Deployment and service commands are in [the deployment notes](docs/launch.md).
 
 The provider currently rejects the Clay color of the Signature Oak Premium Long Sleeve Tee despite advertising it as available in the catalog. Butter, Cypress, and Black in tested sizes are accepted, including in the bundle. The storefront reports provider rejections and asks customers to choose another option; review that color in Fourthwall before promoting it.
 
