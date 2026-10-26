@@ -1,0 +1,15 @@
+{
+  "name": "oak-outpost-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0 --port 3100",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "next": "16.4.3", "react": "19.3.1", "react-dom": "19.3.1", "lucide-react": "^0.577.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "typescript": "^5.9.0", "tsx": "^4.20.0" },
+  "engines": { "node": ">=22" }
+}
