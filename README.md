@@ -2,6 +2,8 @@
 
 Standalone Southern lifestyle storefront built with Next.js and TypeScript. Fourthwall supplies the real product catalog, inventory, customer carts, payment checkout, print-on-demand production, shipping, and order administration during the initial phase. The presentation and source code are independent of the Fourthwall website theme.
 
+Public site: https://oak-outpost-storefront.strataworks-0552.chatgpt.site
+
 ## Run locally
 
 Node.js 22 or newer is required.
@@ -52,7 +54,7 @@ For a later dropshipping supplier, see [migration](docs/dropshipping-migration.m
 
 ## Verification and current limitations
 
-See [verification](docs/verification.md) for the checks actually performed. Payment submission and paid fulfillment have not been tested. The new frontend still needs its own production hosting/domain before it can serve public customers. The existing Fourthwall backend shop was switched to Live with the user's explicit authorization.
+See [verification](docs/verification.md) for the checks actually performed. The standalone frontend is publicly hosted through Sites, with a private GitHub source repository. The Fourthwall backend shop is Live. Payment submission and paid fulfillment have not been tested. A custom customer domain can be connected separately.
 
 The provider currently rejects the Clay color of the Signature Oak Premium Long Sleeve Tee despite advertising it as available in the catalog. Butter, Cypress, and Black in tested sizes are accepted, including in the bundle. The storefront reports provider rejections and asks customers to choose another option; review that color in Fourthwall before promoting it.
 
