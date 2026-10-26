@@ -43,6 +43,16 @@ typography:
     fontSize: "12px"
     fontWeight: 600
     lineHeight: 1.5
+  product-title-mobile:
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "14px"
+    fontWeight: 600
+    lineHeight: 1.6
+  product-price-mobile:
+    fontFamily: "DM Sans, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.6
   control:
     fontFamily: "DM Sans, sans-serif"
     fontSize: "12px"
@@ -159,7 +169,7 @@ Fraunces supplies the warm, slightly nostalgic editorial voice. DM Sans keeps pr
 - **Headline:** General page h1 baseline. Shop, product, story, and contact pages adjust the scale for their content.
 - **Section title:** Repeated h2 baseline; mobile section headings settle around 32–35px.
 - **Body:** The global reading baseline is reduced to 14px on mobile. Authored paragraphs commonly use 12–14px with more generous 1.8–1.95 line height.
-- **Product title:** Compact semibold sans-serif caption paired with tabular prices; mobile product captions use 11px.
+- **Product title:** Compact semibold sans-serif caption paired with tabular prices. At 760px and below, product names increase to 14px with 1.6 line height and prices to 13px; the stacked name/price layout remains intact.
 - **Control:** Button label role; navigation is also semibold sans-serif. Uppercase is reserved for existing identity artwork and the masthead lockup rather than a universal label treatment.
 
 ### Named Rules

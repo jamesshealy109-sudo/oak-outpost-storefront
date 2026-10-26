@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-26T21:43:28.869781+00:00",
+  "generatedAt": "2026-10-26T21:48:32.465164+00:00",
   "title": "Design System: Oak & Outpost",
   "extensions": {
     "colorMeta": {
@@ -209,6 +209,14 @@
       "control": {
         "displayName": "Control",
         "purpose": "Primary and cream button labels."
+      },
+      "product-title-mobile": {
+        "displayName": "Mobile product title",
+        "purpose": "Product names at widths of 760px and below; larger for mobile readability."
+      },
+      "product-price-mobile": {
+        "displayName": "Mobile product price",
+        "purpose": "Tabular product-card prices at widths of 760px and below."
       }
     },
     "shadows": [
@@ -322,7 +330,7 @@
       "refersTo": "product-card",
       "description": "Pale image ground and an open name/price caption. The preview intentionally omits merchandise photography rather than inventing a product.",
       "html": "<article class=\"ds-card\"><a class=\"ds-image\" href=\"#product\" aria-label=\"View product\"><span class=\"ds-arrow\" aria-hidden=\"true\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></span></a><div class=\"ds-caption\"><a href=\"#product\">Product name</a><span>Current price</span></div></article>",
-      "css": ".ds-card{font-family:var(--font-sans, \"DM Sans\", sans-serif);max-width:280px;min-width:0;color:var(--forest,#193c2e);background:transparent}.ds-image{display:block;aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--product-neutral,#eae6dc)}.ds-arrow{position:absolute;right:14px;bottom:14px;width:37px;height:37px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--cream,#f7f3e9);transform:translateY(2px);transition:background .25s,color .25s}.ds-card:hover .ds-arrow{background:var(--forest,#193c2e);color:var(--cream,#f7f3e9)}.ds-caption{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-top:18px;font-size:11px;line-height:1.5}.ds-caption a{font-size:12px;font-weight:600;color:inherit;text-decoration:none}.ds-caption a:hover{text-decoration:underline}.ds-caption span{font-variant-numeric:tabular-nums;white-space:nowrap}.ds-card a:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-arrow{transition:none}}"
+      "css": ".ds-card{font-family:var(--font-sans, \"DM Sans\", sans-serif);max-width:280px;min-width:0;color:var(--forest,#193c2e);background:transparent}.ds-image{display:block;aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--product-neutral,#eae6dc)}.ds-arrow{position:absolute;right:14px;bottom:14px;width:37px;height:37px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--cream,#f7f3e9);transform:translateY(2px);transition:background .25s,color .25s}.ds-card:hover .ds-arrow{background:var(--forest,#193c2e);color:var(--cream,#f7f3e9)}.ds-caption{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-top:18px;font-size:11px;line-height:1.5}.ds-caption a{font-size:12px;font-weight:600;color:inherit;text-decoration:none}.ds-caption a:hover{text-decoration:underline}.ds-caption span{font-variant-numeric:tabular-nums;white-space:nowrap}.ds-card a:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-arrow{transition:none}}@media(max-width:1100px){.ds-caption{flex-direction:column;gap:5px}}@media(max-width:760px){.ds-caption{padding-top:13px}.ds-caption a{font-size:14px;line-height:1.6}.ds-caption span{font-size:13px;line-height:1.6}.ds-image{aspect-ratio:4/5.2}.ds-arrow{width:30px;height:30px;bottom:10px;right:10px}.ds-arrow svg{width:17px}}"
     },
     {
       "name": "Size choice",
