@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.superpowers/
+.impeccable/review/
+.impeccable/mocks/
+*.log
+.DS_Store
+coverage/
+.vercel/
