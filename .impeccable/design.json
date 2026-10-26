@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T21:43:28.869781+00:00",
+  "title": "Design System: Oak & Outpost",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#f7f3e9",
+        "tonalRamp": [
+          "oklch(15% 0.0139 88.68)",
+          "oklch(26% 0.0139 88.68)",
+          "oklch(38% 0.0139 88.68)",
+          "oklch(49% 0.0139 88.68)",
+          "oklch(61% 0.0139 88.68)",
+          "oklch(72% 0.0139 88.68)",
+          "oklch(84% 0.0139 88.68)",
+          "oklch(95% 0.0139 88.68)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#efeadf",
+        "tonalRamp": [
+          "oklch(15% 0.0156 86.43)",
+          "oklch(26% 0.0156 86.43)",
+          "oklch(38% 0.0156 86.43)",
+          "oklch(49% 0.0156 86.43)",
+          "oklch(61% 0.0156 86.43)",
+          "oklch(72% 0.0156 86.43)",
+          "oklch(84% 0.0156 86.43)",
+          "oklch(95% 0.0156 86.43)"
+        ]
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Forest",
+        "canonical": "#193c2e",
+        "tonalRamp": [
+          "oklch(15% 0.0482 165.10)",
+          "oklch(26% 0.0482 165.10)",
+          "oklch(38% 0.0482 165.10)",
+          "oklch(49% 0.0482 165.10)",
+          "oklch(61% 0.0482 165.10)",
+          "oklch(72% 0.0482 165.10)",
+          "oklch(84% 0.0482 165.10)",
+          "oklch(95% 0.0482 165.10)"
+        ]
+      },
+      "deep": {
+        "role": "primary",
+        "displayName": "Deep",
+        "canonical": "#102b21",
+        "tonalRamp": [
+          "oklch(15% 0.0384 166.86)",
+          "oklch(26% 0.0384 166.86)",
+          "oklch(38% 0.0384 166.86)",
+          "oklch(49% 0.0384 166.86)",
+          "oklch(61% 0.0384 166.86)",
+          "oklch(72% 0.0384 166.86)",
+          "oklch(84% 0.0384 166.86)",
+          "oklch(95% 0.0384 166.86)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#656b5a",
+        "tonalRamp": [
+          "oklch(15% 0.0270 123.17)",
+          "oklch(26% 0.0270 123.17)",
+          "oklch(38% 0.0270 123.17)",
+          "oklch(49% 0.0270 123.17)",
+          "oklch(61% 0.0270 123.17)",
+          "oklch(72% 0.0270 123.17)",
+          "oklch(84% 0.0270 123.17)",
+          "oklch(95% 0.0270 123.17)"
+        ]
+      },
+      "tan": {
+        "role": "secondary",
+        "displayName": "Tan",
+        "canonical": "#d7c4a2",
+        "tonalRamp": [
+          "oklch(15% 0.0504 82.11)",
+          "oklch(26% 0.0504 82.11)",
+          "oklch(38% 0.0504 82.11)",
+          "oklch(49% 0.0504 82.11)",
+          "oklch(61% 0.0504 82.11)",
+          "oklch(72% 0.0504 82.11)",
+          "oklch(84% 0.0504 82.11)",
+          "oklch(95% 0.0504 82.11)"
+        ]
+      },
+      "rust": {
+        "role": "secondary",
+        "displayName": "Rust",
+        "canonical": "#ab4c2d",
+        "tonalRamp": [
+          "oklch(15% 0.1328 38.35)",
+          "oklch(26% 0.1328 38.35)",
+          "oklch(38% 0.1328 38.35)",
+          "oklch(49% 0.1328 38.35)",
+          "oklch(61% 0.1328 38.35)",
+          "oklch(72% 0.1328 38.35)",
+          "oklch(84% 0.1328 38.35)",
+          "oklch(95% 0.1328 38.35)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#d9d9c9",
+        "tonalRamp": [
+          "oklch(15% 0.0215 106.83)",
+          "oklch(26% 0.0215 106.83)",
+          "oklch(38% 0.0215 106.83)",
+          "oklch(49% 0.0215 106.83)",
+          "oklch(61% 0.0215 106.83)",
+          "oklch(72% 0.0215 106.83)",
+          "oklch(84% 0.0215 106.83)",
+          "oklch(95% 0.0215 106.83)"
+        ]
+      },
+      "product-neutral": {
+        "role": "neutral",
+        "displayName": "Product Neutral",
+        "canonical": "#eae6dc",
+        "tonalRamp": [
+          "oklch(15% 0.0141 88.69)",
+          "oklch(26% 0.0141 88.69)",
+          "oklch(38% 0.0141 88.69)",
+          "oklch(49% 0.0141 88.69)",
+          "oklch(61% 0.0141 88.69)",
+          "oklch(72% 0.0141 88.69)",
+          "oklch(84% 0.0141 88.69)",
+          "oklch(95% 0.0141 88.69)"
+        ]
+      },
+      "product-sage": {
+        "role": "neutral",
+        "displayName": "Product Sage",
+        "canonical": "#e5e8df",
+        "tonalRamp": [
+          "oklch(15% 0.0124 121.71)",
+          "oklch(26% 0.0124 121.71)",
+          "oklch(38% 0.0124 121.71)",
+          "oklch(49% 0.0124 121.71)",
+          "oklch(61% 0.0124 121.71)",
+          "oklch(72% 0.0124 121.71)",
+          "oklch(84% 0.0124 121.71)",
+          "oklch(95% 0.0124 121.71)"
+        ]
+      },
+      "product-sand": {
+        "role": "neutral",
+        "displayName": "Product Sand",
+        "canonical": "#ede4d7",
+        "tonalRamp": [
+          "oklch(15% 0.0200 77.31)",
+          "oklch(26% 0.0200 77.31)",
+          "oklch(38% 0.0200 77.31)",
+          "oklch(49% 0.0200 77.31)",
+          "oklch(61% 0.0200 77.31)",
+          "oklch(72% 0.0200 77.31)",
+          "oklch(84% 0.0200 77.31)",
+          "oklch(95% 0.0200 77.31)"
+        ]
+      },
+      "product-stone": {
+        "role": "neutral",
+        "displayName": "Product Stone",
+        "canonical": "#e7e6df",
+        "tonalRamp": [
+          "oklch(15% 0.0094 99.99)",
+          "oklch(26% 0.0094 99.99)",
+          "oklch(38% 0.0094 99.99)",
+          "oklch(49% 0.0094 99.99)",
+          "oklch(61% 0.0094 99.99)",
+          "oklch(72% 0.0094 99.99)",
+          "oklch(84% 0.0094 99.99)",
+          "oklch(95% 0.0094 99.99)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Journal display",
+        "purpose": "Large photographic hero headline."
+      },
+      "headline": {
+        "displayName": "Page headline",
+        "purpose": "General page heading baseline."
+      },
+      "section-title": {
+        "displayName": "Section title",
+        "purpose": "Editorial section headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Global reading baseline."
+      },
+      "product-title": {
+        "displayName": "Product title",
+        "purpose": "Open product-card names."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Primary and cream button labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "bag-edge",
+        "value": "-10px 0 40px #0a201b26",
+        "purpose": "Ambient separation of bag drawer."
+      },
+      {
+        "name": "mobile-menu",
+        "value": "0 14px 20px #102b2112",
+        "purpose": "Expanded navigation separation."
+      },
+      {
+        "name": "swatch-check",
+        "value": "drop-shadow(0 1px 2px #000)",
+        "purpose": "White check legibility over merchandise colors."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Navigation underline, editorial image movement, and drawer entry."
+      },
+      {
+        "name": "control-duration",
+        "value": "0.25s",
+        "purpose": "Button colors, nav underline, and accordion chevrons."
+      },
+      {
+        "name": "image-duration",
+        "value": "0.7s",
+        "purpose": "Product enlargement and artwork movement."
+      },
+      {
+        "name": "bag-duration",
+        "value": "0.35s",
+        "purpose": "Drawer translation from the right."
+      },
+      {
+        "name": "hero-duration",
+        "value": "1s",
+        "purpose": "Hero copy arrival, translateY 15px and blur 2px to rest."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "prefers-reduced-motion removes animations, transitions, and smooth scrolling."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "760px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Forest button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main shopping and submission action.",
+      "html": "<button class=\"ds-button\">Shop the collection</button>",
+      "css": ".ds-button{font-family:var(--font-sans, \"DM Sans\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:22px;border:1px solid transparent;border-radius:0;background:var(--forest,#193c2e);color:var(--cream,#f7f3e9);padding:17px 25px;min-height:54px;font-size:12px;font-weight:600;line-height:1.4;letter-spacing:.015em;cursor:pointer;transition:background .25s,color .25s}.ds-button:hover{background:var(--rust,#ab4c2d)}.ds-button:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}.ds-button:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Cream button",
+      "kind": "button",
+      "refersTo": "button-cream",
+      "description": "Light primary action on a dark or photographic surface.",
+      "html": "<button class=\"ds-button ds-cream\">Shop the collection</button>",
+      "css": ".ds-button{font-family:var(--font-sans, \"DM Sans\", sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:22px;border:1px solid transparent;border-radius:0;background:var(--forest,#193c2e);color:var(--cream,#f7f3e9);padding:17px 25px;min-height:54px;font-size:12px;font-weight:600;line-height:1.4;letter-spacing:.015em;cursor:pointer;transition:background .25s,color .25s}.ds-button:hover{background:var(--rust,#ab4c2d)}.ds-button:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}.ds-button:disabled{opacity:.5;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-cream{background:var(--cream,#f7f3e9);color:var(--forest,#193c2e)}.ds-cream:hover{background:var(--tan,#d7c4a2);color:var(--deep,#102b21)}"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "refersTo": "contact-input",
+      "description": "Square bordered contact entry field.",
+      "html": "<label class=\"ds-label\" for=\"ds-email\">Email address<input class=\"ds-field\" id=\"ds-email\" type=\"email\" autocomplete=\"email\"></label>",
+      "css": ".ds-label{font-family:var(--font-sans, \"DM Sans\", sans-serif);display:flex;flex-direction:column;gap:8px;color:var(--forest,#193c2e);font-size:12px;font-weight:600}.ds-field{font-family:var(--font-sans, \"DM Sans\", sans-serif);width:100%;min-width:0;padding:13px;border:1px solid var(--line,#d9d9c9);border-radius:0;background:#fff9;color:var(--forest,#193c2e);font-weight:400;font-size:14px;caret-color:var(--rust,#ab4c2d)}.ds-field:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Semibold links with a growing underline for hover and current page.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Sample main navigation\"><a href=\"#shop\" aria-current=\"page\">Shop the collection</a><a href=\"#story\">Our story</a><a href=\"#help\">Good to know</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-sans, \"DM Sans\", sans-serif);display:flex;flex-wrap:wrap;gap:34px;background:var(--cream,#f7f3e9);color:var(--forest,#193c2e);font-size:12px;font-weight:600}.ds-nav a{position:relative;padding:10px 0;color:inherit;text-decoration:none}.ds-nav a:after{content:\"\";position:absolute;bottom:4px;left:0;width:100%;height:1px;background:var(--forest,#193c2e);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-nav a:hover:after,.ds-nav a[aria-current]:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-nav a:after{transition:none}}"
+    },
+    {
+      "name": "Availability tag",
+      "kind": "chip",
+      "refersTo": "product-tag",
+      "description": "Static merchandise availability or bundle annotation.",
+      "html": "<span class=\"ds-tag\">Currently unavailable</span>",
+      "css": ".ds-tag{font-family:var(--font-sans, \"DM Sans\", sans-serif);display:inline-block;background:var(--cream,#f7f3e9);color:var(--forest,#193c2e);padding:6px 10px;border-radius:0;font-size:10px}"
+    },
+    {
+      "name": "Open product card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Pale image ground and an open name/price caption. The preview intentionally omits merchandise photography rather than inventing a product.",
+      "html": "<article class=\"ds-card\"><a class=\"ds-image\" href=\"#product\" aria-label=\"View product\"><span class=\"ds-arrow\" aria-hidden=\"true\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></span></a><div class=\"ds-caption\"><a href=\"#product\">Product name</a><span>Current price</span></div></article>",
+      "css": ".ds-card{font-family:var(--font-sans, \"DM Sans\", sans-serif);max-width:280px;min-width:0;color:var(--forest,#193c2e);background:transparent}.ds-image{display:block;aspect-ratio:4/5;position:relative;overflow:hidden;background:var(--product-neutral,#eae6dc)}.ds-arrow{position:absolute;right:14px;bottom:14px;width:37px;height:37px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--cream,#f7f3e9);transform:translateY(2px);transition:background .25s,color .25s}.ds-card:hover .ds-arrow{background:var(--forest,#193c2e);color:var(--cream,#f7f3e9)}.ds-caption{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-top:18px;font-size:11px;line-height:1.5}.ds-caption a{font-size:12px;font-weight:600;color:inherit;text-decoration:none}.ds-caption a:hover{text-decoration:underline}.ds-caption span{font-variant-numeric:tabular-nums;white-space:nowrap}.ds-card a:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-arrow{transition:none}}"
+    },
+    {
+      "name": "Size choice",
+      "kind": "button",
+      "refersTo": "size-option",
+      "description": "Outlined merchandise size choice with selected and unavailable states.",
+      "html": "<div class=\"ds-sizes\" role=\"group\" aria-label=\"Example sizes\"><button class=\"ds-size\" aria-pressed=\"false\">S</button><button class=\"ds-size ds-selected\" aria-pressed=\"true\">M</button><button class=\"ds-size\" disabled>L</button></div>",
+      "css": ".ds-sizes{display:flex;gap:7px;flex-wrap:wrap}.ds-size{font-family:var(--font-sans, \"DM Sans\", sans-serif);min-width:44px;min-height:42px;background:none;color:var(--forest,#193c2e);border:1px solid var(--line,#d9d9c9);border-radius:0;padding:8px 13px;font-size:11px;cursor:pointer}.ds-size.ds-selected{background:var(--forest,#193c2e);color:var(--cream,#f7f3e9);border-color:var(--forest,#193c2e)}.ds-size:disabled{text-decoration:line-through;opacity:.38;cursor:not-allowed}.ds-size:focus-visible{outline:2px solid var(--rust,#ab4c2d);outline-offset:5px;}@media(max-width:760px){.ds-size{min-width:46px;min-height:44px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Southern Travel Journal",
+    "overview": "Warm paper, forest ink, expressive serif headlines, and generously framed apparel photography give Oak & Outpost the character of a Southern travel journal. Supplied oak, heron, and backroad artwork anchors the vintage outdoors identity. Controls remain direct and readable within that editorial world.\n\nThe implementation alternates broad photographic passages with quiet cream shopping surfaces. Product images have their own pale grounds and open captions; border rules organize choices and support content. Motion is restrained and removed for reduced-motion preferences. This system describes the built CSS in `app/globals.css`, the local fonts in `app/layout.tsx`, and the shared storefront components.",
+    "keyCharacteristics": [
+      "Warm cream surfaces and dark forest text.",
+      "Fraunces headings paired with DM Sans commerce controls.",
+      "Open product grids with contained merchandise images.",
+      "Square buttons and fields, with circular swatches and bag counters.",
+      "Shaded photography, subtle image movement, and one sliding bag drawer."
+    ],
+    "rules": [
+      {
+        "name": "The Forest Ink Rule",
+        "body": "Main reading and purchasing surfaces use forest ink on cream; burnt orange marks emphasis and interaction rather than replacing the reading color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use Fraunces for editorial headings and DM Sans for purchase decisions, product metadata, and controls.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "Keep normal shopping surfaces flat; reserve ambient edge shadows for overlays and selected-state legibility.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve supplied identity artwork and give actual apparel images open, contained space.",
+      "Do use Fraunces for editorial headings and DM Sans for shopping and support controls.",
+      "Do maintain visible keyboard focus, meaningful selected states, and reduced-motion behavior.",
+      "Do use thin rules and pale tonal grounds to structure flat shopping surfaces."
+    ],
+    "donts": [
+      "Don't wrap ordinary product cards in extra rounded, shadowed panels.",
+      "Don't crop contained merchandise images merely to fill their image ground.",
+      "Don't use decorative glyphs in place of the existing SVG utility icons.",
+      "Don't extend the tiny masthead and footer lockup text into a general-purpose reading or control scale."
+    ]
+  }
+}

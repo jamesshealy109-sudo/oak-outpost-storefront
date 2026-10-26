@@ -6,11 +6,17 @@
 - `FOURTHWALL_SHOP_DOMAIN`: `oak-outpost-llc-shop.fourthwall.com`, or a verified future Fourthwall checkout domain.
 - `NEXT_PUBLIC_SITE_URL`: the actual HTTPS origin of this standalone site, for metadata. Set it during build and at runtime.
 
-The new site is a Node application, not a GitHub Pages static export. It can run on the customer's server, a container host, or a Next-compatible hosting service. The development preview and GitHub push do not constitute a public deployment.
+The application supports a Next.js Node server and a Vinext Cloudflare Worker build. Public hosting is configured in `.openai/hosting.json` for `https://oak-outpost-storefront.strataworks-0552.chatgpt.site`; runtime configuration is held in Sites rather than Git.
+
+## Public hosting
+
+`npm run build:site` produces the Sites Worker through the supplied `sites()` integration. Use the Sites source workflow to push the exact source commit, package `dist`, save the returned version, and deploy it. Keep source write credentials in process memory and stdin only. Preserve public access for this customer preview. Check deployment status and the hosted catalog/cart after publishing.
+
+`npm run build` validates both deployment targets. Both frameworks generate route declarations under `.next`, so `npm run typecheck` first regenerates the Next declarations before checking them. Generated framework declarations and caches are ignored.
 
 ## Node deployment
 
-On the chosen host, set the environment, install dependencies with `npm ci`, run `npm run build`, then run `npm start` under a service manager. Terminate HTTPS at a reverse proxy and forward to port 3100. Preserve the original `Host` header; the cart and form endpoints validate browser Origin against that host. Do not expose a development server publicly.
+On the chosen host, set the environment, install dependencies with `npm ci`, run `npm run build:node`, then run `npm start` under a service manager. Terminate HTTPS at a reverse proxy and forward to port 3100. Preserve the original `Host` header; the cart and form endpoints validate browser Origin against that host. Do not expose a development server publicly.
 
 ## Container deployment
 

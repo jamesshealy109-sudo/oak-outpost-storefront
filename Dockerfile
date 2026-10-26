@@ -10,7 +10,7 @@ ARG NEXT_PUBLIC_SITE_URL=http://localhost:3100
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN npm run build:node
 
 FROM node:22-alpine AS runtime
 WORKDIR /app

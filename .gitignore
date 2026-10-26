@@ -15,3 +15,5 @@ coverage/
 .wrangler/
 dist/
 .dev.vars
+.vinext/
+next-env.d.ts
