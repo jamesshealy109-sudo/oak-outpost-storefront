@@ -10,3 +10,8 @@ out/
 .DS_Store
 coverage/
 .vercel/
+*.tsbuildinfo
+.sites-runtime/
+.wrangler/
+dist/
+.dev.vars

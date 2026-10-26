@@ -1,6 +1,6 @@
 # Oak & Outpost standalone storefront
 
-Status: proposed design for approval. No storefront implementation or GitHub repository has been created yet.
+Status: approved by the user on October 26, 2026, with remaining design decisions delegated to the builder. The user subsequently authorized a public preview and switching Fourthwall to Live.
 
 ## Intent
 

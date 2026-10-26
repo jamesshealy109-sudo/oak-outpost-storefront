@@ -1,0 +1,9 @@
+.git
+node_modules
+.next
+.env*
+.superpowers
+.impeccable/review
+.impeccable/mocks
+*.log
+*.tsbuildinfo
