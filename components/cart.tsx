@@ -22,7 +22,7 @@ import {
 import type { Cart } from "@/lib/commerce/types";
 import { money, shortName } from "@/lib/commerce/validation";
 type Action = {
-  action: "add" | "update" | "remove" | "checkout";
+  action: "add" | "update" | "remove" | "checkout" | "reset";
   slug?: string;
   variantIds?: string[];
   quantity?: number;
@@ -46,6 +46,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [canReset, setCanReset] = useState(false);
   const [notice, setNotice] = useState("");
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLElement | null>(null);
@@ -58,8 +59,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       const r = await fetch("/api/cart", { cache: "no-store" });
       const data = await r.json();
-      if (!r.ok) throw new Error(data.error);
+      if (!r.ok) {
+        setCanReset(data.code === "BUNDLE_CHANGED");
+        throw new Error(data.error);
+      }
       setCart(data.cart);
+      setCanReset(false);
       if (data.message) setNotice(data.message);
     } catch (e) {
       setError(
@@ -98,16 +103,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setError("");
     try {
       const r = await fetch("/api/cart", {
-        method: "POST",
+        method: action.action === "reset" ? "DELETE" : "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(action),
+        ...(action.action === "reset" ? {} : { body: JSON.stringify(action) }),
       });
       const data = await r.json();
-      if (!r.ok)
+      if (!r.ok) {
+        setCanReset(data.code === "BUNDLE_CHANGED");
         throw new Error(
           data.error ?? "Your bag could not be updated. Please try again.",
         );
+      }
       setCart(data.cart);
+      setCanReset(false);
+      if (data.message) setNotice(data.message);
       if (action.action === "checkout") {
         window.location.assign(data.cart.checkoutUrl);
       } else if (action.action === "add") {
@@ -178,6 +187,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
               >
                 Refresh bag
               </button>
+              {canReset && (
+                <div>
+                  <p>Start a new bag to shop again. This clears every item from your saved bag.</p>
+                  <button
+                    className="text-button"
+                    onClick={() => void mutate({ action: "reset" })}
+                    disabled={busy}
+                  >
+                    Clear bag and start again
+                  </button>
+                </div>
+              )}
             </div>
           )}
           <div className="bag-content">

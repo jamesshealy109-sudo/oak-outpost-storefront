@@ -59,6 +59,21 @@ export async function GET() {
     return failure(error);
   }
 }
+export async function DELETE(request: NextRequest) {
+  if (!sameOrigin(request.headers.get("origin"), request.headers.get("host")))
+    return NextResponse.json(
+      { error: "Please update your bag from this website." },
+      { status: 403 },
+    );
+  // Recovery must work even when an old bundle prevents the provider cart from
+  // loading. Forget only this browser's cart link; leave the vendor cart intact.
+  const response = NextResponse.json(
+    { cart: null, message: "Your bag has been cleared. You can start again." },
+    { headers: { "Cache-Control": "no-store" } },
+  );
+  response.cookies.delete(cookieName);
+  return response;
+}
 export async function POST(request: NextRequest) {
   if (!sameOrigin(request.headers.get("origin"), request.headers.get("host")))
     return NextResponse.json(
