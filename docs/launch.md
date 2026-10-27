@@ -19,7 +19,7 @@ The primary deployment is https://oakoutfit.com on the owner's Proxmox server; h
 - Systemd service `oak-outpost.service` runs the standalone `server.js` as `oak-outpost`, listens on port `3100`, restarts on failure, and is enabled at boot. The container is also enabled at host boot.
 - Environment: `/etc/oak-outpost/storefront.env`, root-owned mode `600`. Do not print it into logs or copy it into Git.
 - Existing Nginx Proxy Manager in container `102`: proxy host ID `3`, `oakoutfit.com` and `www.oakoutfit.com` → `http://10.10.10.48:3100`; Let's Encrypt certificate ID `4`, valid through January 25, 2027. HTTP redirects to HTTPS. DNS is A `@` → `75.176.194.21` and CNAME `www` → `oakoutfit.com`. Google Workspace mail records remain separate.
-- The earlier proxy host ID `2`, `oakoutfit.strataworks.tech`, and certificate ID `3` remain available. Its DNS passes through Cloudflare.
+- The earlier proxy host ID `2` and certificate ID `3` remain configured, but the Cloudflare DNS record for `oakoutfit.strataworks.tech` was deleted at the owner's request on October 27, 2026. Use the customer domain above.
 - Before-change proxy database backups: `/opt/npm/data/backups/before-oak-outpost-20261026.sqlite` and `/opt/npm/data/backups/before-oak-customer-domain-20261027.sqlite` in container `102`. Existing storage and earlier Oak proxy entries were compared in full and remained identical during customer-domain setup.
 - Temporary deployment SSH access was removed and a fresh authentication attempt was rejected. No deployment SSH credential remains in the repository or on this development PC.
 
