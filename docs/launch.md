@@ -6,20 +6,21 @@
 - `FOURTHWALL_SHOP_DOMAIN`: `oak-outpost-llc-shop.fourthwall.com`, or a verified future Fourthwall checkout domain.
 - `NEXT_PUBLIC_SITE_URL`: the actual HTTPS origin of this standalone site, for metadata. Set it during build and at runtime.
 
-The primary deployment is https://oakoutfit.strataworks.tech on the owner's Proxmox server. The application supports a Next.js Node server and an optional Vinext Worker build. Runtime configuration is outside Git.
+The primary deployment is https://oakoutfit.com on the owner's Proxmox server; https://www.oakoutfit.com serves the same storefront. The application supports a Next.js Node server and an optional Vinext Worker build. Runtime configuration is outside Git.
 
 ## Current Proxmox deployment
 
 - Node `prox`, new unprivileged Debian 12 container `105` (`oak-outpost`); 2 vCPU, 2 GiB RAM, 1 GiB swap, 12 GiB disk. Nesting is enabled for systemd compatibility.
 - Current container address: `10.10.10.48`, MAC `BC:24:11:A3:D9:47`, DHCP on `vmbr0`. Reserve that lease on the router before relying on the address long term; the reverse proxy uses this address.
 - Node.js `22.23.4`, installed from the official Linux archive after SHA-256 verification.
-- Application source: `a03e84d6e4ce0b521c6d32dfbf74ceb081f91931`. The production build uses `NEXT_PUBLIC_SITE_URL=https://oakoutfit.strataworks.tech`.
-- Runtime release: `/opt/oak-outpost/releases/a03e84d6e4ce0b521c6d32dfbf74ceb081f91931-oakoutfit`; `/opt/oak-outpost/current` selects the active release. The earlier release remains available for rollback.
+- Application source: `a03e84d6e4ce0b521c6d32dfbf74ceb081f91931`. The production build uses `NEXT_PUBLIC_SITE_URL=https://oakoutfit.com`.
+- Runtime release: `/opt/oak-outpost/releases/a03e84d6e4ce0b521c6d32dfbf74ceb081f91931-oakoutfit-com-20261027`; `/opt/oak-outpost/current` selects the active release. Earlier releases remain available for rollback. The prior environment is protected at `/etc/oak-outpost/backups/before-customer-domain-20261027.env`.
 - Source checkout: `/opt/oak-outpost/source`, owned by the non-login `oak-outpost` user. Production release files are root-owned; `.next/cache` is writable by the service user.
 - Systemd service `oak-outpost.service` runs the standalone `server.js` as `oak-outpost`, listens on port `3100`, restarts on failure, and is enabled at boot. The container is also enabled at host boot.
 - Environment: `/etc/oak-outpost/storefront.env`, root-owned mode `600`. Do not print it into logs or copy it into Git.
-- Existing Nginx Proxy Manager in container `102`: new proxy host ID `2`, `oakoutfit.strataworks.tech` → `http://10.10.10.48:3100`; certificate ID `3`. HTTP redirects to HTTPS. Public DNS currently passes through Cloudflare; direct origin HTTPS was also verified.
-- Before-change proxy database backup: `/opt/npm/data/backups/before-oak-outpost-20261026.sqlite` in container `102`. Existing storage proxy row was compared in full and remained identical.
+- Existing Nginx Proxy Manager in container `102`: proxy host ID `3`, `oakoutfit.com` and `www.oakoutfit.com` → `http://10.10.10.48:3100`; Let's Encrypt certificate ID `4`, valid through January 25, 2027. HTTP redirects to HTTPS. DNS is A `@` → `75.176.194.21` and CNAME `www` → `oakoutfit.com`. Google Workspace mail records remain separate.
+- The earlier proxy host ID `2`, `oakoutfit.strataworks.tech`, and certificate ID `3` remain available. Its DNS passes through Cloudflare.
+- Before-change proxy database backups: `/opt/npm/data/backups/before-oak-outpost-20261026.sqlite` and `/opt/npm/data/backups/before-oak-customer-domain-20261027.sqlite` in container `102`. Existing storage and earlier Oak proxy entries were compared in full and remained identical during customer-domain setup.
 - Temporary deployment SSH access was removed and a fresh authentication attempt was rejected. No deployment SSH credential remains in the repository or on this development PC.
 
 Run these from the authenticated Proxmox node shell:
@@ -29,7 +30,7 @@ pct status 105
 pct exec 105 -- systemctl status oak-outpost --no-pager
 pct exec 105 -- journalctl -u oak-outpost -n 60 --no-pager
 pct exec 105 -- systemctl restart oak-outpost
-curl -fsS https://oakoutfit.strataworks.tech/api/cart
+curl -fsS https://oakoutfit.com/api/cart
 ```
 
 For updates, select and verify an immutable Git commit, build as the application user with the public site origin, stage a new release with its static/public assets, switch `current`, restart, and repeat the live catalog/cart/checkout checks. Keep the prior release until the new one passes. Reverting code also requires restoring any changed runtime environment values; never restore the entire shared proxy database just to revert this site.

@@ -2,7 +2,7 @@
 
 Standalone Southern lifestyle storefront built with Next.js and TypeScript. Fourthwall supplies the real product catalog, inventory, customer carts, payment checkout, print-on-demand production, shipping, and order administration during the initial phase. The presentation and source code are independent of the Fourthwall website theme.
 
-Public site: https://oakoutfit.strataworks.tech
+Public site: https://oakoutfit.com (also available at https://www.oakoutfit.com).
 
 ## Run locally
 

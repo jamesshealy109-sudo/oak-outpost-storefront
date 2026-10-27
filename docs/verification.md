@@ -38,3 +38,13 @@ This is the current primary deployment; the earlier Sites publication above is h
 - Before editing the proxy, a protected database backup was created. The full existing storage proxy row was compared afterward and was identical. Existing containers remained running. Temporary root SSH access was removed; a new connection with that key was rejected, and its local key files were removed.
 
 Remaining limits: payment and fulfillment were not purchased/tested; optional email integrations are unconfigured; Fourthwall checkout return navigation still uses its existing store setting. Reserve the container's current DHCP address for long-term upstream stability. Chrome extension control was unavailable, so GoDaddy DNS was completed by the user and frontend browser verification used the in-app browser.
+
+## Customer domain — October 27, 2026
+
+- Public DNS now resolves `oakoutfit.com` to the origin `75.176.194.21`, and `www.oakoutfit.com` aliases `oakoutfit.com`. DNS changes were completed by the owner; no email DNS records were edited during this server work.
+- Reproduced TLS handshake failures on both customer hostnames while the earlier storefront still returned HTTP 200. Added a separate Nginx Proxy Manager entry (host ID `3`) for both names, forwarding to the same storefront container.
+- Issued and attached Let's Encrypt certificate ID `4` covering both names, expiring January 25, 2027. Certificate hostname validation and HTTPS HTTP 200 passed for both names; HTTP redirects to HTTPS.
+- Rebuilt the same application source commit `a03e84d6e4ce0b521c6d32dfbf74ceb081f91931` with public origin `https://oakoutfit.com`. Next.js compilation and TypeScript passed. Staged an immutable release with the `-oakoutfit-com-20261027` suffix, retained the previous release and environment for rollback, and verified the restarted service and metadata.
+- Chrome opened `https://www.oakoutfit.com/` successfully. Real HTTPS integration checks on that hostname passed regular and bundle add, persistence, quantity updates, checkout handoff HTTP 200, removal, reset, secure HttpOnly cookies, and rejection of a foreign Origin. The branded tee quantity 2 subtotal was $55.98; the bundle quantity 2 subtotal was $155.94. No order was placed.
+- The apex home and shop returned HTTP 200, and an apex same-Origin cart reset succeeded. The earlier storefront returned HTTP 200, and the existing storage host returned its HTTP 302 response. Full existing proxy entries remained unchanged; a protected proxy database backup preceded the changes.
+- Temporary deployment SSH access was removed after verification. Paid payment/fulfillment and Fourthwall checkout return navigation retain the limits recorded above.
